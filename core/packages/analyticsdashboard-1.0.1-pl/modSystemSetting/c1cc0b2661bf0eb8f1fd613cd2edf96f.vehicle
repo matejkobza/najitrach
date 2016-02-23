@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'analytics',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'b9253520148bf633b1d0d316e05dc61c',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'c1cc0b2661bf0eb8f1fd613cd2edf96f',
+  'native_key' => 'analytics_activetabs',
+  'object' => '{"key":"analytics_activetabs","value":"{\\"visitors\\":true,\\"traffic-sources\\":true,\\"top-content\\":true,\\"goals\\":true,\\"keywords\\":true,\\"sitesearch\\":true}","xtype":"textfield","namespace":"analytics","area":"","editedon":null}',
+);

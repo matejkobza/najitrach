@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'analytics',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'cb0e8674730119eff457679cad6ac155',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'b84b38344a6a7d0a4c4b801114e21fd0',
+  'native_key' => 'analytics_sitename',
+  'object' => '{"key":"analytics_sitename","value":"","xtype":"textfield","namespace":"analytics","area":"","editedon":null}',
+);

@@ -1,0 +1,57 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'unique_key' => 'text',
+  'related_objects' => 
+  array (
+    'Action' => 
+    array (
+      '3837d9752b0f76c25b688b7c7e888b64' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'namespace',
+          1 => 'controller',
+        ),
+        'class' => 'modAction',
+        'object' => '{"id":1,"namespace":"chimpx","parent":0,"controller":"index","haslayout":1,"lang_topics":"chimpx:default","assets":"","help_url":""}',
+        'guid' => '863c59b2684670eb8479c091d3f1003b',
+        'native_key' => 1,
+        'signature' => '8a2228cea8991f461e3c663ae96b3be7',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Action' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'namespace',
+        1 => 'controller',
+      ),
+    ),
+  ),
+  'namespace' => 'chimpx',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"chimpx-0.0.1-beta1\\/modMenu\\/656d8a2216162fd22cb1f26ebfb79e62.resolve.paths.resolver","type":"php","name":"resolve.paths"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '64c26cffb268bfa5308dd07cb977280a',
+  'package' => 'modx',
+  'class' => 'modMenu',
+  'signature' => '656d8a2216162fd22cb1f26ebfb79e62',
+  'native_key' => 'chimpx',
+  'object' => '{"text":"chimpx","parent":"components","action":1,"description":"chimpx.menu_desc","icon":"images\\/icons\\/plugin.gif","menuindex":0,"params":"","handler":"","permissions":""}',
+);

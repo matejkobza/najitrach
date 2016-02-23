@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'analytics',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'c934e57738098e5863537ffa313ffa56',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '8cdba9be472c4aab8b4f20cbb869a67c',
+  'native_key' => 'analytics_accountId',
+  'object' => '{"key":"analytics_accountId","value":"","xtype":"textfield","namespace":"analytics","area":"","editedon":null}',
+);

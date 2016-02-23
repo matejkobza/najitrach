@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'analytics',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '0bce01c0229d5fa870ddaeab77437e9e',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'cd81c35ce905f1a29991a0201264d952',
+  'native_key' => 'analytics_days',
+  'object' => '{"key":"analytics_days","value":"7","xtype":"textfield","namespace":"analytics","area":"","editedon":null}',
+);

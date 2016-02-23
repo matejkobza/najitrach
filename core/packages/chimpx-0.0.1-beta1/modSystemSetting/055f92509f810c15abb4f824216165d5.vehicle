@@ -1,0 +1,23 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'chimpx',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"chimpx-0.0.1-beta1\\/modSystemSetting\\/055f92509f810c15abb4f824216165d5.resolve.setupoptions.resolver","type":"php","name":"resolve.setupoptions"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '325afbf1f7ba47f3a647f7de000dd483',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '055f92509f810c15abb4f824216165d5',
+  'native_key' => 'chimpx.apikey',
+  'object' => '{"key":"chimpx.apikey","value":"","xtype":"text-password","namespace":"chimpx","area":"","editedon":null}',
+);

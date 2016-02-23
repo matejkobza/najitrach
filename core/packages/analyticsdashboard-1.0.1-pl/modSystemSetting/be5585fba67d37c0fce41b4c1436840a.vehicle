@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'analytics',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'ab2885419b2de4ef71cd026573c45532',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'be5585fba67d37c0fce41b4c1436840a',
+  'native_key' => 'analytics_webPropertyId',
+  'object' => '{"key":"analytics_webPropertyId","value":"","xtype":"textfield","namespace":"analytics","area":"","editedon":null}',
+);

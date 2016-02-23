@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'chimpx',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'c17dbdca43cf8c8cc8eff29804ef015e',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'c04a0a85c3289c6a510675e76c82db6d',
+  'native_key' => 'chimpx.apikey',
+  'object' => '{"key":"chimpx.apikey","value":"","xtype":"text-password","namespace":"chimpx","area":"","editedon":null}',
+);

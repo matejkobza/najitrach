@@ -1,0 +1,93 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Snippets' => 
+    array (
+      '548de5a1e4b7c44d95297dafc84370f6' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":0,"name":"chimpxSubscribe","description":"Create a subscription form for your MailChimp lists.","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/**\\r\\n * MailChimp Subscribe snippet.\\r\\n *\\r\\n * @author Garry Nutting (11\\/09\\/08)\\r\\n * @author ecreate (http:\\/\\/modxcms.com\\/forums\\/index.php?action=profile;u=35415)\\r\\n * @author Romain Tripault \\/\\/ Melting Media <romain@melting-media.com>\\r\\n *\\r\\n * @package chimpx\\r\\n *\\/\\r\\n$chimpx = $modx->getService(\'chimpx\',\'chimpx\',$modx->getOption(\'chimpx.core_path\',null,$modx->getOption(\'core_path\').\'components\\/chimpx\\/\').\'model\\/chimpx\\/\',$scriptProperties);\\r\\nif (!($chimpx instanceof chimpx)) return \'\';\\r\\n\\r\\n$api = new MCAPI($modx->getOption(\'chimpx.apikey\'));\\r\\n\\r\\n$listId = $modx->getOption(\'listId\',$scriptProperties,\'\');\\r\\n$debug = $modx->getOption(\'debug\',$scriptProperties,false);\\r\\n$formTpl = $modx->getOption(\'formTpl\',$scriptProperties,\'formTpl\');\\r\\n\\/\\/@TODO: i18n with lexicons\\r\\n$errorMsg = $modx->getOption(\'errorMsg\',$scriptProperties,\'There was a problem subscribing you.\');\\r\\n$successMsg = $modx->getOption(\'successMsg\',$scriptProperties,\'You were successfully subscribed.\');\\r\\n\\r\\nif ($formTpl != null && $modx->getChunk($formTpl) != null) {\\r\\n    if (isset($_POST[\'subscribe\'])) {\\r\\n        if ($api->errorCode != \'\') {\\r\\n            if ($debug == true) {\\r\\n                $debugOutput .= \\"code:\\".$api->errorCode.\\"\\\\n\\";\\r\\n                $debugOutput .= \\"msg :\\".$api->errorMessage.\\"\\\\n\\";\\r\\n                return $modx->getChunk($formTpl);\\r\\n            } else {\\r\\n                $modx->setPlaceholder(\'MailChimp.message\', \'Login to remote service failed\');\\r\\n                return $modx->parseChunk($formTpl, $modx->placeholders, \'[[+\',\']]\');\\r\\n            }\\r\\n        }\\r\\n\\r\\n        $mergeVars = array();\\r\\n        foreach($_POST as $key => $value) {\\r\\n            if(substr($key,0,3) == \'mc_\') {\\r\\n                $fieldName = ltrim($key, \'mc_\');\\r\\n                $mergeVars[$fieldName] = $value;\\r\\n            }\\r\\n        }\\r\\n\\r\\n        if(empty($mergeVars)) {\\r\\n            $mergeVars = array(\'\');\\r\\n        }\\r\\n\\r\\n        $retVal = $api->listSubscribe($listId, $_POST[\'mc_EMAIL\'], $mergeVars);\\r\\n\\r\\n        if (!$retVal) {\\r\\n            if ($debug == true) {\\r\\n                $debugOutput .= \\"Unable to load listSubscribe()!\\\\n\\";\\r\\n                $debugOutput .= \\"\\\\tCode=\\".$api->errorCode.\\"\\\\n\\";\\r\\n                $debugOutput .= \\"\\\\tMsg=\\".$api->errorMessage.\\"\\\\n\\";\\r\\n            }\\r\\n            $modx->setPlaceholder(\'MailChimp.error\', $errorMsg);\\r\\n        } else {\\r\\n            if ($debug == true) {\\r\\n                $debugOutput .= \\"Returned: \\".$retVal.\\"\\\\n\\";\\r\\n            }\\r\\n            $modx->setPlaceholder(\'MailChimp.success\', $successMsg);\\r\\n        }\\r\\n    }\\r\\n\\r\\n    if ($debug == true) echo $debugOutput;\\r\\n    if (is_array($modx->placeholders)) {\\r\\n        $ph = array_merge($modx->config, $modx->placeholders);\\r\\n    } else {\\r\\n        $ph = $modx->config;\\r\\n    }\\r\\n    return $modx->parseChunk($formTpl, $ph, \'[[+\',\']]\');\\r\\n} else {\\r\\n    return \'Please specify a valid form chunk.\';\\r\\n}","locked":0,"properties":"a:5:{s:7:\\"formTpl\\";a:6:{s:4:\\"name\\";s:7:\\"formTpl\\";s:4:\\"desc\\";s:24:\\"prop_chimpx.formTpl_desc\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:7:\\"formTpl\\";s:7:\\"lexicon\\";s:17:\\"chimpx:properties\\";}s:6:\\"listId\\";a:6:{s:4:\\"name\\";s:6:\\"listId\\";s:4:\\"desc\\";s:23:\\"prop_chimpx.listId_desc\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:17:\\"chimpx:properties\\";}s:5:\\"debug\\";a:6:{s:4:\\"name\\";s:5:\\"debug\\";s:4:\\"desc\\";s:22:\\"prop_chimpx.debug_desc\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:1:\\"0\\";s:7:\\"lexicon\\";s:17:\\"chimpx:properties\\";}s:8:\\"errorMsg\\";a:6:{s:4:\\"name\\";s:8:\\"errorMsg\\";s:4:\\"desc\\";s:25:\\"prop_chimpx.errorMsg_desc\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:17:\\"chimpx:properties\\";}s:10:\\"successMsg\\";a:6:{s:4:\\"name\\";s:10:\\"successMsg\\";s:4:\\"desc\\";s:27:\\"prop_chimpx.successMsg_desc\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:17:\\"chimpx:properties\\";}}","moduleguid":""}',
+        'guid' => 'f075c6950e7c69741f71486e33016a3c',
+        'native_key' => 0,
+        'signature' => '8e180106b48e76c78bf721aae8daa0fd',
+      ),
+      '551c0183145740682e7683ace38b7725' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":1,"name":"listCampaigns","description":"List your MailChimp campaigns.","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/**\\r\\n * Retrieve campaigns archives for a given MailChimp list\\r\\n *\\r\\n * @package chimpx\\r\\n *\\/\\r\\n\\r\\n$chimpx = $modx->getService(\'chimpx\',\'chimpx\',$modx->getOption(\'chimpx.core_path\',null,$modx->getOption(\'core_path\').\'components\\/chimpx\\/\').\'model\\/chimpx\\/\',$scriptProperties);\\r\\nif (!($chimpx instanceof chimpx)) return \'\';\\r\\n\\r\\n$tpl = $modx->getOption(\'tpl\',$scriptProperties,\'campaignTpl\');\\r\\n$limit = $modx->getOption(\'limit\',$scriptProperties,25);\\r\\n$offset = $modx->getOption(\'offset\',$scriptProperties,0);\\r\\n$listId = $modx->getOption(\'listId\',$scriptProperties,\'\');\\r\\n$status = $modx->getOption(\'status\',$scriptProperties,\'\');\\r\\n$outputSeparator = $modx->getOption(\'outputSeparator\',$scriptProperties,\\"\\\\n\\");\\r\\n\\r\\nif (!$listId) {\\r\\n    \\/\\/ @TODO: i18n (lexicon)\\r\\n    return \'Set a list ID first!\';\\r\\n}\\r\\n\\r\\n$api = new MCAPI($modx->getOption(\'chimpx.apikey\'));\\r\\n\\r\\n\\/\\/ filters to apply to the query\\r\\n$filters = array();\\r\\n    $filters[\'list_id\'] = $listId;\\r\\n    $filters[\'status\'] = $status;\\r\\n\\r\\n$campaigns = $api->campaigns($filters,$offset,$limit);\\r\\n\\r\\n$output = \'\';\\r\\n\\r\\nif ($api->errorCode){\\r\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'Uhoh, error n#: \'. $api->errorCode .\' message: \'. $api->errorMessage);\\r\\n    return $modx->error->failure(\'error n#: \'. $api->errorCode .\' message: \'. $api->errorMessage);\\r\\n} else {\\r\\n    $count = $campaigns[\'total\'];\\r\\n    $modx->setPlaceholder(\'total\', $count);\\r\\n\\r\\n    $list = array();\\r\\n    foreach ($campaigns[\'data\'] as $campaign) {\\r\\n        $list[] = $chimpx->getChunk($tpl,$campaign);\\r\\n    }\\r\\n\\r\\n    $output = implode($list,$outputSeparator);\\r\\n    return $output;\\r\\n}","locked":0,"properties":"a:6:{s:3:\\"tpl\\";a:6:{s:4:\\"name\\";s:3:\\"tpl\\";s:4:\\"desc\\";s:20:\\"prop_chimpx.tpl_desc\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:11:\\"campaignTpl\\";s:7:\\"lexicon\\";s:17:\\"chimpx:properties\\";}s:5:\\"limit\\";a:6:{s:4:\\"name\\";s:5:\\"limit\\";s:4:\\"desc\\";s:22:\\"prop_chimpx.limit_desc\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";i:5;s:7:\\"lexicon\\";s:17:\\"chimpx:properties\\";}s:15:\\"outputSeparator\\";a:6:{s:4:\\"name\\";s:15:\\"outputSeparator\\";s:4:\\"desc\\";s:32:\\"prop_chimpx.outputseparator_desc\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:17:\\"chimpx:properties\\";}s:6:\\"offset\\";a:6:{s:4:\\"name\\";s:6:\\"offset\\";s:4:\\"desc\\";s:23:\\"prop_chimpx.offset_desc\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:17:\\"chimpx:properties\\";}s:6:\\"listId\\";a:6:{s:4:\\"name\\";s:6:\\"listId\\";s:4:\\"desc\\";s:23:\\"prop_chimpx.listId_desc\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:17:\\"chimpx:properties\\";}s:6:\\"status\\";a:6:{s:4:\\"name\\";s:6:\\"status\\";s:4:\\"desc\\";s:23:\\"prop_chimpx.status_desc\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:17:\\"chimpx:properties\\";}}","moduleguid":""}',
+        'guid' => 'e6e987253893ae2e836fee2dda67d79a',
+        'native_key' => 1,
+        'signature' => 'b7ea29130eb9ece66c50217f85e3df96',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Children' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'category',
+      'related_objects' => true,
+      'related_object_attributes' => 
+      array (
+        'Snippets' => 
+        array (
+          'preserve_keys' => false,
+          'update_object' => true,
+          'unique_key' => 'name',
+        ),
+        'Chunks' => 
+        array (
+          'preserve_keys' => false,
+          'update_object' => true,
+          'unique_key' => 'name',
+        ),
+      ),
+    ),
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'chimpx',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"chimpx-0.0.1-beta1\\/modCategory\\/d9cd049b684dfdec317c7d48ff4b7758\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"chimpx"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"chimpx-0.0.1-beta1\\/modCategory\\/d9cd049b684dfdec317c7d48ff4b7758\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"chimpx"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '6339d6befbdd7f354d8615fde0561ff4',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => 'd9cd049b684dfdec317c7d48ff4b7758',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"chimpx"}',
+);

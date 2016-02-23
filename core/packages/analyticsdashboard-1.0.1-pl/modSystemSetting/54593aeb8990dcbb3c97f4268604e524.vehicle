@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'analytics',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '37309f44777577a9a82a869b146567ae',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '54593aeb8990dcbb3c97f4268604e524',
+  'native_key' => 'analytics_sessionToken',
+  'object' => '{"key":"analytics_sessionToken","value":"","xtype":"textfield","namespace":"analytics","area":"","editedon":null}',
+);
