@@ -1,0 +1,147 @@
+#reservation_plan_global {
+    padding: 25px;
+    padding-top: 5px;
+    width: 850px;
+    height: 600px;
+    position: fixed;
+    top: 90px;
+    right: -900px;
+    z-index: 2;
+    background: transparent url('../img/bg_w75.png') repeat;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+#reservation_plan_indoors {
+    padding: 25px;
+    padding-top: 5px;
+    overflow: hidden; 
+    width: 1010px; 
+    height: 600px; 
+    position: fixed; 
+    right: -1060px; 
+    top: 90px; 
+    z-index: 2;
+    background: transparent url('../img/bg_w75.png') repeat;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.reservationsForm {
+    position: relative;
+    width: 230px;
+    z-index: 3;
+    border: 1px #AFAFAF solid;
+    background: #FFFFFF;
+    padding: 10px;
+}
+
+#reservation_plan_global .reservationsForm {
+    top: -1100px;
+    left: 585px;
+    height: 160px;
+}
+
+#reservation_plan_indoors .reservationsForm {
+    top: -1205px;
+    left: 750px;
+    height: 190px;
+}
+
+
+#reservation_plan_global a {
+    display: block;
+    position: relative;
+}
+.reservation_court {
+    width: 119px;
+    height: 59px; 
+    background: transparent; 
+}
+.reservation_court:hover, .reservation_court.active {
+    background: rgba(255, 255, 255, 0.5);
+}
+#reservation_link_court1 {
+    top: -436px; 
+    left: 62px;
+}
+#reservation_link_court2 {
+    top: -436px; 
+    left: 62px;
+}
+#reservation_link_court3 {
+    top: -436px; 
+    left: 131px;
+}
+#reservation_link_restaurant {
+    width: 126px; 
+    height: 90px; 
+    top: -398px; 
+    left: 83px; 
+    background: transparent;
+}
+#reservation_link_restaurant:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+.reservation_fishing {
+    width: 15px; 
+    height: 16px; 
+    background: url('../img/reservation_plan_fishing.png') 5px 5px no-repeat; 
+    padding: 5px;
+}
+.reservation_fishing:hover, .reservation_fishing.active {
+    background-position:  5px -21px;
+}
+#resrvation_link_fishing1{top: -539px; left: 274px;}
+#resrvation_link_fishing2{top: -567px; left: 324px;}
+#resrvation_link_fishing3{top: -582px; left: 380px;}
+#resrvation_link_fishing4{top: -595px; left: 435px;}
+#resrvation_link_fishing5{top: -611px; left: 477px;}
+#resrvation_link_fishing6{top: -610px; left: 486px;}
+#resrvation_link_fishing7{top: -600px; left: 472px;}
+#resrvation_link_fishing8{top: -580px; left: 453px;}
+#resrvation_link_fishing9{top: -563px; left: 433px;}
+#resrvation_link_fishing10{top: -545px; left: 409px;}
+#resrvation_link_fishing11{top: -593px; left: 366px;}
+#resrvation_link_fishing12{top: -650px; left: 322px;}
+#resrvation_link_fishing13{top: -708px; left: 283px;}
+#resrvation_link_fishing14{top: -766px; left: 241px;}
+
+.reservationsForm span.row {
+    display: block;
+    padding: 3px;
+    height: 25px;
+}
+
+.reservationsForm span.display-none {
+    display: none;
+}
+
+.reservationsForm span.row input {
+    float: right;
+}
+
+#reservation_plan_indoors a {display: block; position: relative;}
+.reservation_table{width: 26px; height: 59px; background: transparent; }
+.reservation_table:hover, .reservation_table.active {background: rgba(255, 255, 255, 0.5);}
+#reservation_link_table01 {top: -423px; left: 83px;  height: 25px;}
+#reservation_link_table02 {top: -448px; left: 170px; height: 25px;}
+#reservation_link_table03 {top: -473px; left: 259px; height: 25px;}
+#reservation_link_table04 {top: -498px; left: 348px; height: 25px;}
+#reservation_link_table05 {top: -523px; left: 432px; height: 25px;}
+#reservation_link_table06 {top: -548px; left: 519px; height: 25px; width: 27px;}
+#reservation_link_table07 {top: -527px; left: 169px; height: 42px; width: 27px;}
+#reservation_link_table08 {top: -569px; left: 258px; height: 42px; width: 27px;}
+#reservation_link_table09 {top: -611px; left: 431px; height: 42px; width: 27px;}
+#reservation_link_table10 {top: -653px; left: 519px; height: 42px; width: 27px;}
+#reservation_link_table11 {top: -725px; left: 615px; height: 43px; width: 26px;}
+#reservation_link_table12 {top: -676px; left: 169px; height: 43px; width: 27px;}
+#reservation_link_table13 {top: -718px; left: 259px; height: 43px; width: 27px;}
+#reservation_link_table14 {top: -761px; left: 431px; height: 43px; width: 27px;}
+#reservation_link_table15 {top: -805px; left: 520px; height: 43px; width: 27px;}
+#reservation_link_table16 {top: -864px; left: 615px; height: 43px; width: 26px;}
+#reservation_link_table17 {top: -828px; left: 615px; height: 43px; width: 26px;}
+#reservation_link_table18 {top: -857px; left: 169px; height: 44px; width: 27px;}
+#reservation_link_table19 {top: -900px; left: 321px; height: 64px; width: 27px;}
+
+.error {
+    border: 1px #FF0000 solid;
+}

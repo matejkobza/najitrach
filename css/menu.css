@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'MyriadProLightBold';
+    src: url('../fonts/myriadpro-semiboldwebfont.eot');
+    src: url('../fonts/myriadpro-semiboldwebfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/myriadpro-semiboldwebfont.woff') format('woff'),
+         url('../fonts/myriadpro-semiboldwebfont.ttf') format('truetype'),
+         url('../fonts/myriadpro-semiboldwebfont.svg#MyriadProLightBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body{
+    margin:0px;
+    padding: 0px;
+    font-family: 'MyriadProLightBold';
+    
+}
+
+a{
+    text-decoration: none;
+    color: #a11a01;
+    text-decoration: none;
+}
+
+
+div.center{
+    font-size: 13px;
+}
+
+.lowercase{
+    text-transform: lowercase;
+}
+
+.defaultcase{
+    text-transform:none;
+}
+

@@ -1,0 +1,69 @@
+var Language = {}
+Language.close = 'Zav\u0159ít';
+Language.prev = 'D\u0159íve';
+Language.next = 'Pozd\u011bji';
+Language.january = 'leden';
+Language.february = 'únor';
+Language.march = 'b\u0159ezen';
+Language.april = 'duben';
+Language.may = 'kv\u011bten';
+Language.june = '\u010derven';
+Language.july = '\u010dervenec';
+Language.august = 'srpen';
+Language.september = 'zá\u0159í';
+Language.october = '\u0159íjen';
+Language.november = 'listopad';
+Language.december = 'prosinec';
+Language.restaurant_na_jitrach = 'Restaurace Na Jitrách - Semice';
+Language.successfully_saved_reservation = 'Va\u0161e rezervace byla úspě\u0161ne p\u0159idána';
+Language.name = 'Jméno';
+Language.email = 'Email';
+Language.phone = 'Telefon';
+
+Language.validate = {}
+Language.validate.no_suitable_object_selected = 'Nevybrali jste si objekt který chcete zarezervovat';
+Language.validate.is_required = 'je povinne pole';
+Language.validate.select_time_of_reservation_begining = 'Musite vyplnit datum a \u010das zacatku rezervace';
+Language.validate.select_time_of_reservation_ending = 'Musite vyplnit datum a \u010das konce rezervace';
+
+Language.calendar = {}
+Language.calendar.jan = 'led';
+Language.calendar.feb = 'úno';
+Language.calendar.mar = 'b\u0159e';
+Language.calendar.apr = 'dub';
+Language.calendar.may = 'kv\u011b';
+Language.calendar.jun = '\u010der';
+Language.calendar.jul = '\u010dec';
+Language.calendar.aug = 'srp';
+Language.calendar.sep = 'zá\u0159';
+Language.calendar.oct = '\u0159íj';
+Language.calendar.nov = 'lis';
+Language.calendar.dec = 'pro';
+
+Language.calendar.monday = 'pond\u011blí';
+Language.calendar.tuesday = 'úterí';
+Language.calendar.wednesday = 'st\u0159eda';
+Language.calendar.thursday = '\u010dtvrtek';
+Language.calendar.friday = 'pátek';
+Language.calendar.saturday = 'sobota';
+Language.calendar.sunday = 'ned\u011ble';
+
+Language.calendar.short = {}
+Language.calendar.short.monday = 'po';
+Language.calendar.short.tuesday = 'út';
+Language.calendar.short.wednesday = 'st';
+Language.calendar.short.thursday = '\u010dt';
+Language.calendar.short.friday = 'pá';
+Language.calendar.short.saturday = 'so';
+Language.calendar.short.sunday = 'ne';
+
+Language.calendar.short.hours = 'hod';
+Language.calendar.short.minutes = 'min';
+Language.calendar.short.seconds = 'sec';
+Language.calendar.short.miliseconds = 'mil';
+
+Language.calendar.timezone = 'zóna';
+Language.calendar.now = 'Nyní';
+Language.calendar.week = 'Týden';
+Language.calendar.timeOnlyTitle = 'Vyberte \u010cas';
+Language.calendar.time = '\u010cas';
